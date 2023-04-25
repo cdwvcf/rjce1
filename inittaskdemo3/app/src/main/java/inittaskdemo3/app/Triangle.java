@@ -1,8 +1,20 @@
 package inittaskdemo3.app;
 
 public class Triangle {
-    public String classify(int a, int b, int c) {
-        if (a <1 || a>100 || b<1 || b>100 || c<1 || c> 100) {
+
+    //定义一个常量
+    public static final Integer V1 = 100;
+    /**
+     * description:
+     * @param:  * @param a
+     * @param b
+     * @param c
+     * @return: java.lang.String
+     */
+
+    public String classify(int  a, int b, int c) {
+        long n;
+        if (a < 1 || a >  V1 || b < 1 || b >  V1 || c < 1 || c >  V1) {
             return "输入错误";
         }
         if (!((a + b > c) && (a + c > b) && (b + c > a))) {
@@ -15,4 +27,6 @@ public class Triangle {
             return "等腰三角形";
         }
     }
+
+
 }
